@@ -15,32 +15,37 @@
 
 int main()
 {
-    int num = 6, sum = 0;
+    int num = 2, sum = 0;
     int i;
 
-    for (i=1; i<num; i++)
-    {
-        if (num%i==0)
-        {
-            printf(" %d ", i);
-            sum += i;
-        }
-    }
-    printf("\nsum = %d \n", sum);
+	while ( num++ < 1000 )
+	{
+		sum = 0;
+		for (i=1; i<num; i++)
+		{
+			if (num%i==0)
+			{
+				sum += i;
+			}
+		}
+		
 
-    if (num == sum)
-    {
-        printf("%d: Its factors are 1", num);
+		if (num == sum)
+		{
+			printf("%d: Its factors are 1", num);
 
-        for (i=2; i<num; i++)
-        {
-            if (num%i==0)
-            {
-                printf(", %d ", i);
-            }
-        }
-        printf("\n");
-    }
+			for (i=2; i<num; i++)
+			{
+				if (num%i==0)
+				{
+					printf(", %d", i);
+				}
+			}
+
+			printf("\n");
+		}
+
+	}
 
 
     return 0;
