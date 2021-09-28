@@ -1,8 +1,8 @@
 //
-//  three.c
+//  three_while.c
 //  6.4思考与练习 -- Third question
 //
-//  Created by yangshidong on 21/9/27
+//  Created by yangshidong on 21/9/28
 //  Copyright © 2021年 xuedaon.  All rights reserved. 
 //
 
@@ -13,27 +13,33 @@
 int main()
 {
     int gcd, lcm;
-    int n1 = 72, n2 = 120, i = 0;
+    int n1 = 81, n2 = 153;
+
 
     /************Greatest common divisorgcd*************/
-    
-    // for 循环
-    for (i=1; i<=n1 && i<=n2; i++)
+    // while 循环 
+    gcd = ( n1 < n2 ) ? n1 : n2;
+
+    while ( n1%gcd || n2%gcd )
     {
-        // 判断 i 是否为最大公约数
-        if (n1%i==0 && n2%i==0)
-        {
-            gcd = i;
-        }
+        gcd--;
     }
 
     printf(" The greatest common divisor of %d and %d is %d \n", n1, n2, gcd);
 
     /***********lowest common multipleLCM*************/
-    
     // 通过最大公约数计算
-    lcm = (n1 * n2)/gcd;
-    printf("The least common multiple of %d and %d is %d \n", n1, n2, lcm);
+    
+    lcm = ( n1 > n2 ) ? n1 : n2;
+
+    while ( lcm++ )
+    {
+        if ( lcm%n1==0 && lcm%n2==0 )
+        {
+            printf("The least common multiple of %d and %d is %d \n", n1, n2, lcm);
+            break;
+        }
+    }
 
     return 0;
 }

@@ -1,5 +1,5 @@
 //
-//  one.c
+//  two_while.c
 //  6.4思考与练习 -- Second question(爱因斯坦阶梯)
 //
 //  Created by yangshidong on 21/9/27

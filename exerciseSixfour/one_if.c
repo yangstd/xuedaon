@@ -1,6 +1,6 @@
 //
-//  one.c
-//  6.4思考与练习 -- first question(if...else...)
+//  one_if.c
+//  6.4思考与练习 -- first question(if...else if...else...)
 //
 //  Created by yangshidong on 21/9/27
 //  Copyright © 2021年 xuedaon.  All rights reserved. 
@@ -10,41 +10,32 @@
 
 int main()
 {
-    int score = 0;
-    char grade = '0';
+    int score = -58;
 
-    printf("Please input your score: ");
-    scanf("%d", &score);
-    
-    if ( score >= 90 && score <= 100 )
+    if ( score > 100 || score < 0 )
     {
-        grade = 'A';
+        printf( "score error! \n" );
     }
-    if ( score >= 80 && score < 90 )
+    else if ( score > 90 )
     {
-        grade = 'B';
+        printf( "grade A \n" );
     }
-    if ( score >= 70 && score < 80 )
+    else if ( score > 80 )
     {
-        grade = 'C';
+        printf( "grade B \n" );
     }
-    if ( score >= 60 && score < 70 )
+    else if ( score > 70 )
     {
-        grade = 'D';
+        printf( "grade C \n" );
     }
-    if (score >= 0 && score < 60 )
+    else if ( score > 60 )
     {
-        grade = 'E';
-    }
-    if (score < 0 || score > 100)
-    {
-        printf("Input error! \n");
+        printf( "grade D \n" );
     }
     else
     {
-        printf("grade %c \n", grade);
+        printf( "grade E \n" );
     }
-
 
     return 0;
 }
