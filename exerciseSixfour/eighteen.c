@@ -13,7 +13,7 @@
 
 int main()
 {
-    int num = 123456, a = 0, mun = 0, n;
+    int num = 22123456, a = 0, mun = 0, n;
     n = num;
 
     printf("num = %d \n", num);
@@ -26,7 +26,7 @@ int main()
     }
 
     // 逆序
-    while (a-- > 0)
+    while ( a-- )
     {
         mun += (num % 10) * pow(10, a);
         num /= 10;
