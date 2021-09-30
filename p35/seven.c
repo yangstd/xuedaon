@@ -15,7 +15,7 @@ int main()
 {
     int num[20], i, k, m, n;
     int *p = num;
-    n = 8;
+    n = 15;
     
     // 对数组前八个赋值
     for ( i = 0; i < n; i++)
