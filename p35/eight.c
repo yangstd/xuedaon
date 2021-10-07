@@ -13,6 +13,15 @@
 
 int main()
 {
+    // 一月    二月     三月  四月  五月 六月 七月 八月   九月      十月    十一月   十二月
+    // January February March April May  June July August September October November December
+    
+    char *Month[12] = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "November"};
+    
+    int month = 3;
+
+    printf( "%d 月的英文名为: %s \n", month, *(Month + month - 1) );
+    
     return 0;
 }
 

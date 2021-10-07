@@ -7,11 +7,41 @@
 //
 
 #include <stdio.h>
+#define MONTH 12
 
 //  给出日期(年月日)， 计算该日是该年的第几天(需要考虑是否是闰年) 
 
 int main()
 {
+    int days[2][MONTH] = { {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},
+                           {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31} };
+
+    int i, year, month, day;
+
+    year = 2021;
+    month = 10;
+    day = 8;
+
+    if ( ((year%4==0) && (year%100!=0)) || (year%400==0) ) // 闰年
+    {
+        for ( i = 1; i < month; i++ )
+        {
+            day += days[1][i-1];
+        }
+
+        printf("day is %d \n", day);
+    }
+    else 
+    {
+        for ( i = 1; i < month; i++ )
+        {
+            day += days[0][i-1];
+        }
+
+        printf("day is %d \n", day);
+    }
+
+
 
     return 0;
 }
