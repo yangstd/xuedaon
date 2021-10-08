@@ -20,28 +20,22 @@ int main()
 
     year = 2021;
     month = 10;
-    day = 8;
+    day = 10;
 
-    if ( ((year%4==0) && (year%100!=0)) || (year%400==0) ) // 闰年
+    for ( i = 1; i < month; i++ )
     {
-        for ( i = 1; i < month; i++ )
+        if ( ((year%4==0) && (year%100!=0)) || (year%400==0) )
         {
             day += days[1][i-1];
         }
-
-        printf("day is %d \n", day);
-    }
-    else 
-    {
-        for ( i = 1; i < month; i++ )
+        else
         {
             day += days[0][i-1];
         }
-
-        printf("day is %d \n", day);
     }
 
 
+    printf("day is %d \n", day);
 
     return 0;
 }
